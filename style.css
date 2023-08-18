@@ -8,7 +8,7 @@
 body{
     background: #56baed;;
 }
-.select-box, .play-board{
+.select-box, .play-board, .result-box{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -50,14 +50,18 @@ body{
  cursor: pointer;
  transition: all 0.3s ease;
 }
-.options button:hover{
-    transform: scale(0.96);
+.options button:hover,
+.btn button:hover{
+  transform: scale(0.96);
 }
 .options button.playerX{
     margin-right: 5px;
 }
 .options button.playerO{
     margin-left: 5px;
+}
+.play-board {
+    display: none;
 }
 .play-board .details .players{
     display: flex;
@@ -114,3 +118,41 @@ body{
  line-height: 80px;
  color: #56baed;
 }
+
+.result-box{
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 350px;
+    width: 100%;
+    /*display: none; */
+}
+.result-box  .won-text{
+    font-size: 25px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+}
+.result-box  .won-text p{
+    font-weight: 700;
+    margin: 0 5px;
+
+}
+.result-box .btn{
+  width: 100%;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+.btn button{
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 20px;
+    border: none;
+    background: #56baed;
+    border-radius: 5px;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
